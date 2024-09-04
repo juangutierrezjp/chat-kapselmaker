@@ -61,6 +61,7 @@ const handleIncomingMessage = async (msg, { provider, flowDynamic, fallBack }) =
         const finalResponse = await iaAgent(context, API_URL, text);
         await updateContext(from, 'Asistente', finalResponse);
         const responseText = cleanText(finalResponse);
+        console.log("generando audio: ", responseText)
         const audioFilePath = await createAudioFileFromText(responseText);
         await flowDynamic(["", { body: " ", media: audioFilePath }]);
         deleteAudio(audioFilePath);
