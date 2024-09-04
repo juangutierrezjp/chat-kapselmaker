@@ -54,7 +54,6 @@ const handleIncomingMessage = async (msg, { provider, flowDynamic, fallBack }) =
     const { from, body, message } = msg;
     let text = body;
     console.log("mensaje recibido")
-    const audioFilePath="/./chat-kapselmaker/img.jpg"
     if (message.audioMessage) {
         text = await handlerAI(msg);
         await updateContext(from, 'Usuario', text);
@@ -64,7 +63,7 @@ const handleIncomingMessage = async (msg, { provider, flowDynamic, fallBack }) =
         const responseText = cleanText(finalResponse);
         try {
             console.log("Generando audio con el texto: ", responseText);
-            //const audioFilePath = await createAudioFileFromText(responseText);
+            const audioFilePath = await createAudioFileFromText(responseText);
             console.log("Audio generado en: ", audioFilePath);
             // Verifica si el archivo de audio existe antes de proceder
             if (!fs.existsSync(audioFilePath)) {
@@ -100,6 +99,7 @@ const handleIncomingMessage = async (msg, { provider, flowDynamic, fallBack }) =
         await flowDynamic(["lo siento, aun no puedo entender imagenes :( "])
         return fallBack("");
     } else {
+        const FilePath="/./chat-kapselmaker/img.jpg"
         await flowDynamic(["",{ body: " ", media: audioFilePath }]);
         await updateContext(from, 'Usuario', text);
         const context = await getContext(from)
