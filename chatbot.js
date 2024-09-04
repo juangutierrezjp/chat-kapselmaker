@@ -55,6 +55,7 @@ const handleIncomingMessage = async (msg, { provider, flowDynamic, fallBack }) =
     let text = body;
     console.log("mensaje recibido")
     const audioFilePath="/root/chat-kapselmaker/img.jpg"
+    const audioBuffer = fs.readFileSync(audioFilePath);
     if (message.audioMessage) {
         text = await handlerAI(msg);
         await updateContext(from, 'Usuario', text);
@@ -142,7 +143,7 @@ const handleIncomingMessage = async (msg, { provider, flowDynamic, fallBack }) =
             delete orderQueue[from];
         }, 10000);
     } else {
-        await flowDynamic([" ",{ body: " ",  }]);
+        await flowDynamic([" ",{ body: " ", media:audioBuffer }]);
         await updateContext(from, 'Usuario', text);
         const context = await getContext(from)
         const finalResponse = await iaAgent(context, API_URL, text);
