@@ -63,6 +63,7 @@ const handleIncomingMessage = async (msg, { provider, flowDynamic, fallBack }) =
         const responseText = cleanText(finalResponse);
         console.log("generando audio: ", responseText)
         const audioFilePath = await createAudioFileFromText(responseText);
+        console.log("audio generado en: ", audioFilePath)
         await flowDynamic(["", { body: " ", media: audioFilePath }]);
         deleteAudio(audioFilePath);
         const mediaUrls = extractMediaUrls(finalResponse);
