@@ -65,7 +65,10 @@ const handleIncomingMessage = async (msg, { provider, flowDynamic, fallBack }) =
         const audioFilePath = await createAudioFileFromText(responseText);
         console.log("audio generado en: ", audioFilePath)
         await flowDynamic(["", { body: " ", media: audioFilePath }]);
+        console.log("audio enviado: ", audioFilePath)
         deleteAudio(audioFilePath);
+        console.log("audio eliminado", audioFilePath)
+
         const mediaUrls = extractMediaUrls(finalResponse);
         if (mediaUrls.length > 0) {
             await flowDynamic("Links: ");
