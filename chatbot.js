@@ -102,7 +102,7 @@ const handleIncomingMessage = async (msg, { provider, flowDynamic, fallBack }) =
         
         const response = async ()=>{
             console.log("enviando...")
-            await flowDynamic([{ body: " ", media: '\root\chat-kapselmaker\img.jpg' }]);
+            await flowDynamic({  media: '/root/chat-kapselmaker/img.jpg' });
         }
         response()
         await updateContext(from, 'Usuario', text);
