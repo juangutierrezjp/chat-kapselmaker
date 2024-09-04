@@ -55,7 +55,6 @@ const handleIncomingMessage = async (msg, { provider, flowDynamic, fallBack }) =
     let text = body;
     console.log("mensaje recibido")
     const audioFilePath="/root/chat-kapselmaker/img.jpg"
-    const audioBuffer = fs.readFileSync(audioFilePath);
     if (message.audioMessage) {
         text = await handlerAI(msg);
         await updateContext(from, 'Usuario', text);
