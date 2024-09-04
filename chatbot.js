@@ -61,13 +61,27 @@ const handleIncomingMessage = async (msg, { provider, flowDynamic, fallBack }) =
         const finalResponse = await iaAgent(context, API_URL, text);
         await updateContext(from, 'Asistente', finalResponse);
         const responseText = cleanText(finalResponse);
-        console.log("generando audio: ", responseText)
-        const audioFilePath = await createAudioFileFromText(responseText);
-        console.log("audio generado en: ", audioFilePath)
-        await flowDynamic(["hola", { body: " ", media: audioFilePath }]);
-        console.log("audio enviado: ", audioFilePath)
-        deleteAudio(audioFilePath);
-        console.log("audio eliminado", audioFilePath)
+        try {
+            console.log("Generando audio con el texto: ", responseText);
+            const audioFilePath = await createAudioFileFromText(responseText);
+            console.log("Audio generado en: ", audioFilePath);
+            // Verifica si el archivo de audio existe antes de proceder
+            if (!fs.existsSync(audioFilePath)) {
+                throw new Error("El archivo de audio no fue creado correctamente.");
+            }
+            console.log("Enviando audio...");
+            // Intenta enviar el archivo de audio utilizando flowDynamic
+            await flowDynamic([
+                " ", 
+                { body: " ", media: audioFilePath } // Asegúrate de que flowDynamic acepte esta estructura
+            ]);
+            console.log("Audio enviado: ", audioFilePath);
+            // Después de enviar, elimina el archivo de audio
+            deleteAudio(audioFilePath);
+            console.log("Audio eliminado: ", audioFilePath);
+        } catch (error) {
+            console.error("Error durante el proceso de generación/envío de audio: ", error);
+        }
 
         const mediaUrls = extractMediaUrls(finalResponse);
         if (mediaUrls.length > 0) {
