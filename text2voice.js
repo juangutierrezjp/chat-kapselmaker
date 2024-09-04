@@ -16,13 +16,14 @@ const client = new ElevenLabsClient({
 
 const createAudioFileFromText = async (text) => {
     return new Promise(async (resolve, reject) => {
+        console.log("Generando audio 1%")
         try {
             // Verificar si la carpeta "temp_files" existe, si no, crearla
             const tempDir = path.join(__dirname, 'temp_files');
             if (!existsSync(tempDir)) {
                 mkdirSync(tempDir);
             }
-
+            console.log("Generando audio 10%")
             // Generar el audio a partir del texto usando la voz y modelo especificados
             const audio = await client.generate({
                 voice: "Sofi",  // Voz especificada
@@ -30,7 +31,7 @@ const createAudioFileFromText = async (text) => {
                 model_id: "eleven_turbo_v2_5",  // Modelo turbo especificado
                 text: text,
             });
-
+            console.log("Generando audio 20%")
             // Generar un nombre único para el archivo de salida dentro de la carpeta "temp_files"
             const fileName = `${uuid()}.mp3`;
             const absoluteFilePath = path.join(tempDir, fileName); // Ruta absoluta dentro de "temp_files"
@@ -39,13 +40,13 @@ const createAudioFileFromText = async (text) => {
 
             // Escribir el audio en el archivo
             audio.pipe(fileStream);
-
+            console.log("Generando audio 30%")
             // Resolver la promesa cuando la escritura del archivo esté completa
             fileStream.on('finish', () => resolve(absoluteFilePath)); // Devolver la ruta absoluta
             fileStream.on('error', reject);
-
+            console.log("Generando audio 100%")
         } catch (error) {
-            console.log(error);
+            reject(error);
         }
     });
 };
