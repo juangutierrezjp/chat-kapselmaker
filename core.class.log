@@ -1,0 +1,368 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875601433@s.whatsapp.net',
+    fromMe: false,
+    id: '049D7295A429957467',
+    participant: undefined
+  },
+  messageTimestamp: 1725423128,
+  pushName: 'Juan Gutiérrez',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage { text: 'per', contextInfo: [ContextInfo] },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'per',
+  from: '5493875601433'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_db83d4ee-e5fa-4eb6-a396-7792d651e6a2',
+  keyword: 'key_93c433ef-7fb3-4df2-b910-fd392ca45207',
+  answer: 'Hola! ¿En qué puedo ayudarte?',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '48f9262323fa7f87023d53ed35ae241e'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875601433@s.whatsapp.net',
+    fromMe: false,
+    id: 'B5A8B059F7DB3F01FA',
+    participant: undefined
+  },
+  messageTimestamp: 1725423140,
+  pushName: 'Juan Gutiérrez',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: 'pero como puede ser? no que sabias de cafe?',
+      contextInfo: [ContextInfo]
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'pero como puede ser? no que sabias de cafe?',
+  from: '5493875601433'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875601433@s.whatsapp.net',
+    fromMe: false,
+    id: 'A655E83E65EFAAC6E2',
+    participant: undefined
+  },
+  messageTimestamp: 1725423164,
+  pushName: 'Juan Gutiérrez',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: 'pero quiero saber como hacer un cafe con leche',
+      contextInfo: [ContextInfo]
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'pero quiero saber como hacer un cafe con leche',
+  from: '5493875601433'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875601433@s.whatsapp.net',
+    fromMe: false,
+    id: 'F4BD6B38DED6EBE1EE',
+    participant: undefined
+  },
+  messageTimestamp: 1725423225,
+  pushName: 'Juan Gutiérrez',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: 'cuales son las las lineas de capsulas de cafe',
+      contextInfo: [ContextInfo]
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'cuales son las las lineas de capsulas de cafe',
+  from: '5493875601433'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875601433@s.whatsapp.net',
+    fromMe: false,
+    id: '044301CE599088E180',
+    participant: undefined
+  },
+  messageTimestamp: 1725423262,
+  pushName: 'Juan Gutiérrez',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: 'que horarios tienen',
+      contextInfo: [ContextInfo]
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'que horarios tienen',
+  from: '5493875601433'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875601433@s.whatsapp.net',
+    fromMe: false,
+    id: '390A2D544B77E7B891',
+    participant: undefined
+  },
+  messageTimestamp: 1725423296,
+  pushName: 'Juan Gutiérrez',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: 'que promociones tienen',
+      contextInfo: [ContextInfo]
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'que promociones tienen',
+  from: '5493875601433'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875601433@s.whatsapp.net',
+    fromMe: false,
+    id: '4334EB559008F9421C',
+    participant: undefined
+  },
+  messageTimestamp: 1725423329,
+  pushName: 'Juan Gutiérrez',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: 'la de los martes solo es de Galicia?',
+      contextInfo: [ContextInfo]
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'la de los martes solo es de Galicia?',
+  from: '5493875601433'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875601433@s.whatsapp.net',
+    fromMe: false,
+    id: '775A7CEE993A90533A',
+    participant: undefined
+  },
+  messageTimestamp: 1725423354,
+  pushName: 'Juan Gutiérrez',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage { text: 'ah joya', contextInfo: [ContextInfo] },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'ah joya',
+  from: '5493875601433'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875601433@s.whatsapp.net',
+    fromMe: false,
+    id: '601D4104017CD0523E',
+    participant: undefined
+  },
+  messageTimestamp: 1725423385,
+  pushName: 'Juan Gutiérrez',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: 'como es la receta para un cafe con leche',
+      contextInfo: [ContextInfo]
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'como es la receta para un cafe con leche',
+  from: '5493875601433'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875601433@s.whatsapp.net',
+    fromMe: false,
+    id: '355B268B4AEFE7C5C1',
+    participant: undefined
+  },
+  messageTimestamp: 1725423431,
+  pushName: 'Juan Gutiérrez',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: 'tenes alguina receta?',
+      contextInfo: [ContextInfo]
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'tenes alguina receta?',
+  from: '5493875601433'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875601433@s.whatsapp.net',
+    fromMe: false,
+    id: '155C31AB69B6A144E1',
+    participant: undefined
+  },
+  messageTimestamp: 1725423469,
+  pushName: 'Juan Gutiérrez',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: 'y tienen cafe instantaneo?',
+      contextInfo: [ContextInfo]
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'y tienen cafe instantaneo?',
+  from: '5493875601433'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875601433@s.whatsapp.net',
+    fromMe: false,
+    id: '9C901603619FD8E37C',
+    participant: undefined
+  },
+  messageTimestamp: 1725423504,
+  pushName: 'Juan Gutiérrez',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: 'como lo producen al cafe instantaneo?',
+      contextInfo: [ContextInfo]
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'como lo producen al cafe instantaneo?',
+  from: '5493875601433'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875601433@s.whatsapp.net',
+    fromMe: false,
+    id: '78E8774BDB020D0DD0',
+    participant: undefined
+  },
+  messageTimestamp: 1725423572,
+  pushName: 'Juan Gutiérrez',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: 'es torrado?',
+      contextInfo: [ContextInfo]
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'es torrado?',
+  from: '5493875601433'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875601433@s.whatsapp.net',
+    fromMe: false,
+    id: 'B518C41BF995CBBAD7',
+    participant: undefined
+  },
+  messageTimestamp: 1725423630,
+  pushName: 'Juan Gutiérrez',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: 'el instantaneo es torrado o no?',
+      contextInfo: [ContextInfo]
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'el instantaneo es torrado o no?',
+  from: '5493875601433'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493875601433@s.whatsapp.net',
+    fromMe: false,
+    id: '4BCA67370D3594C62B',
+    participant: undefined
+  },
+  messageTimestamp: 1725423755,
+  pushName: 'Juan Gutiérrez',
+  broadcast: false,
+  message: Message {
+    audioMessage: AudioMessage {
+      url: 'https://mmg.whatsapp.net/v/t62.7117-24/11949033_1195467684834775_1874340420939448659_n.enc?ccb=11-4&oh=01_Q5AaINqA6FO-tGKC3rN0Ow98HxYZywNPc7woplZYJbsbkyIV&oe=66FF62CE&_nc_sid=5e03e0&mms3=true',
+      mimetype: 'audio/ogg; codecs=opus',
+      fileSha256: [Uint8Array],
+      fileLength: [Long],
+      seconds: 3,
+      ptt: true,
+      mediaKey: [Uint8Array],
+      fileEncSha256: [Uint8Array],
+      directPath: '/v/t62.7117-24/11949033_1195467684834775_1874340420939448659_n.enc?ccb=11-4&oh=01_Q5AaINqA6FO-tGKC3rN0Ow98HxYZywNPc7woplZYJbsbkyIV&oe=66FF62CE&_nc_sid=5e03e0',
+      mediaKeyTimestamp: [Long],
+      contextInfo: [ContextInfo],
+      streamingSidecar: [Uint8Array],
+      waveform: [Uint8Array]
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '_event_voice_note__c8d7d053-5012-44e3-9ece-f36f2fe745bd',
+  from: '5493875601433'
+}

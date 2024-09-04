@@ -1,0 +1,37 @@
+[
+    {
+        "sku": "SKU001",
+        "nombre": "Smartphone Galaxy S21",
+        "precio": "999.00",
+        "utilidades": "Pantalla AMOLED, 128GB almacenamiento, Cámara 108MP",
+        "descripcion": "El Samsung Galaxy S21 cuenta con una pantalla AMOLED de 6.2 pulgadas, almacenamiento de 128GB y una cámara principal de 108MP para fotos impresionantes."
+    },
+    {
+        "sku": "SKU002",
+        "nombre": "Laptop Dell XPS 13",
+        "precio": "1299.00",
+        "utilidades": "Procesador Intel i7, 16GB RAM, 512GB SSD",
+        "descripcion": "La Dell XPS 13 es una laptop ultradelgada con un procesador Intel i7 de 11ª generación, 16GB de RAM y un SSD de 512GB, ideal para profesionales en movimiento."
+    },
+    {
+        "sku": "SKU003",
+        "nombre": "Auriculares Sony WH-1000XM4",
+        "precio": "349.00",
+        "utilidades": "Cancelación de ruido, 30 horas de batería, Control táctil",
+        "descripcion": "Los auriculares Sony WH-1000XM4 ofrecen una cancelación de ruido líder en la industria, hasta 30 horas de duración de batería y controles táctiles intuitivos."
+    },
+    {
+        "sku": "SKU004",
+        "nombre": "Televisor LG OLED CX",
+        "precio": "1999.00",
+        "utilidades": "4K UHD, Dolby Vision, 120Hz, HDMI 2.1",
+        "descripcion": "El televisor LG OLED CX proporciona una calidad de imagen 4K UHD con Dolby Vision, una frecuencia de actualización de 120Hz y soporte para HDMI 2.1, ideal para videojuegos y cine en casa."
+    },
+    {
+        "sku": "SKU005",
+        "nombre": "Reloj Inteligente Apple Watch Series 6",
+        "precio": "399.00",
+        "utilidades": "Monitorización de oxígeno en sangre, GPS, Resistente al agua",
+        "descripcion": "El Apple Watch Series 6 cuenta con monitorización de oxígeno en sangre, GPS incorporado y es resistente al agua hasta 50 metros, perfecto para mantenerte conectado y saludable."
+    }
+]

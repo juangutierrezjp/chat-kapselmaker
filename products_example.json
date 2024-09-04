@@ -1,0 +1,60 @@
+{
+    "products": [
+        {
+            "name": "TECLADO GAMER WEIBO WB-539",
+            "id": 5260,
+            "list_price": "1.25",
+            "qty_available": 35,
+            "category_id": 1,
+            "category": "All"
+        },
+        {
+            "name": "SMARTWATCH XIAOMI MI BAND 5",
+            "id": 5261,
+            "list_price": "2.75",
+            "qty_available": 50,
+            "category_id": 2,
+            "category": "Electronics"
+        },
+        {
+            "name": "AURICULARES BLUETOOTH JBL TUNE 500BT",
+            "id": 5262,
+            "list_price": "3.50",
+            "qty_available": 20,
+            "category_id": 2,
+            "category": "Electronics"
+        },
+        {
+            "name": "MOCHILA ESCOLAR TOTTO",
+            "id": 5263,
+            "list_price": "4.00",
+            "qty_available": 15,
+            "category_id": 3,
+            "category": "School Supplies"
+        },
+        {
+            "name": "LAPICERO BIC AZUL",
+            "id": 5264,
+            "list_price": "0.10",
+            "qty_available": 200,
+            "category_id": 3,
+            "category": "School Supplies"
+        },
+        {
+            "name": "CARGADOR INALÁMBRICO SAMSUNG",
+            "id": 5265,
+            "list_price": "5.00",
+            "qty_available": 25,
+            "category_id": 2,
+            "category": "Electronics"
+        },
+        {
+            "name": "TABLETA GRÁFICA WACOM INTUOS",
+            "id": 5266,
+            "list_price": "6.50",
+            "qty_available": 10,
+            "category_id": 1,
+            "category": "All"
+        }
+    ]
+}
