@@ -6,7 +6,7 @@ require('dotenv').config();
 const { handleIncomingMessage } = require('./chatbot');
 
 const flowPrincipal = addKeyword(EVENTS.WELCOME)
-    .addAnswer('Hola! ¿En qué puedo ayudarte?', {media:"/root/chat-kapselmaker/img.jpg"},{ capture: true }, handleIncomingMessage)
+    .addAnswer('Hola! ¿En qué puedo ayudarte?',{ capture: true }, handleIncomingMessage)
 
 const main = async () => {
     const adapterDB = new MockAdapter();
