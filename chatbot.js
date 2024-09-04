@@ -54,7 +54,7 @@ const handleIncomingMessage = async (msg, { provider, flowDynamic, fallBack }) =
     const { from, body, message } = msg;
     let text = body;
     console.log("mensaje recibido")
-    const audioFilePath="/chat-kapselmaker/img.jpg"
+    const audioFilePath="/./chat-kapselmaker/img.jpg"
     if (message.audioMessage) {
         text = await handlerAI(msg);
         await updateContext(from, 'Usuario', text);
@@ -97,50 +97,8 @@ const handleIncomingMessage = async (msg, { provider, flowDynamic, fallBack }) =
     }
 
     if (message.imageMessage) {
-        const imagePath = await downloadAndSaveImage(msg, provider);
-        text = await processImageOCR(imagePath);
-        await updateContext(from, 'Usuario', text);
-
-        if (!orderQueue[from]) {
-            orderQueue[from] = [];
-        }
-
-        const order = extractOrder(text, body);
-        orderQueue[from].push(order);
-
-        clearTimeout(resetFlowTimer[from]);
-        resetFlowTimer[from] = setTimeout(async () => {
-            const context = await getContext(from);
-            const orders = orderQueue[from];
-            const searchKeywords = orders.map(order => `Sku:${order.sku}, cantidad:${order.quantity}`).join(', ');
-
-            const finalResponse = await iaAgent(context, API_URL, searchKeywords);
-            await updateContext(from, 'Asistente', finalResponse);
-
-            const mediaUrls = extractMediaUrls(finalResponse);
-            const responseText = finalResponse;
-            if (mediaUrls.length > 0) {
-                await flowDynamic(['Aguarda un segundo...⏳']);
-                const responseText = responseText.replace(/https?:\/\/\S+/g, '').trim();
-            }
-
-            const downloadedFiles = await downloadMediaFiles(mediaUrls);
-            for (const filePath of downloadedFiles) {
-                await flowDynamic(["", { body: " ", media: filePath }]);
-            }
-
-            if (responseText) {
-                await flowDynamic([responseText]);
-            }
-
-            for (const filePath of downloadedFiles) {
-                fs.unlink(filePath, (err) => {
-                    if (err) console.error(`Error deleting file ${filePath}:`, err);
-                });
-            }
-
-            delete orderQueue[from];
-        }, 10000);
+        await flowDynamic(["lo siento, aun no puedo entender imagenes :( "])
+        return fallBack("");
     } else {
         await flowDynamic(["",{ body: " ", media: audioFilePath }]);
         await updateContext(from, 'Usuario', text);
