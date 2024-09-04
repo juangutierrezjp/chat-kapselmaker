@@ -77,7 +77,7 @@ const handleIncomingMessage = async (msg, { provider, flowDynamic, fallBack }) =
             } else {
                 throw new Error("El archivo de audio no fue generado correctamente.");
             }            
-            await flowDynamic(["",{ body: " ", media: audioFilePath } // Asegúrate de que flowDynamic acepte esta estructura
+            await flowDynamic([" ",{ body: " ", media:audioFilePath } // Asegúrate de que flowDynamic acepte esta estructura
             ]);
             console.log("Audio enviado: ", audioFilePath);
             // Después de enviar, elimina el archivo de audio
