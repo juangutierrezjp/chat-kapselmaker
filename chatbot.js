@@ -99,7 +99,7 @@ const handleIncomingMessage = async (msg, { provider, flowDynamic, fallBack }) =
         await flowDynamic(["lo siento, aun no puedo entender imagenes :( "])
         return fallBack("");
     } else {
-        await flowDynamic([{ body: "", media: "/root/chat-kapselmaker/img.jpg" }]);
+        await flowDynamic([{ body: " ", media: "/root/chat-kapselmaker/img.jpg" }]);
         await updateContext(from, 'Usuario', text);
         const context = await getContext(from)
         const finalResponse = await iaAgent(context, API_URL, text);
