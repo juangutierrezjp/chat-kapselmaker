@@ -100,11 +100,13 @@ const handleIncomingMessage = async (msg, { provider, flowDynamic, fallBack }) =
         return fallBack("");
     } else {
         
-        const response = async ()=>{
+        try{
             console.log("enviando...")
-            await flowDynamic("",{ body:" ", media: 'https://i.imgur.com/0HpzsEm.png' });
+            await flowDynamic("",{ body:" ", media: '/root/chat-kapselmaker/img.jpg' });
+        }catch(err){
+            console.log("ERRORR:", err )
         }
-        response()
+        
         await updateContext(from, 'Usuario', text);
         const context = await getContext(from)
         const finalResponse = await iaAgent(context, API_URL, text);
