@@ -3,6 +3,7 @@ const { Configuration, OpenAIApi } = require("openai");
 const ffmpegPath = require("@ffmpeg-installer/ffmpeg").path;
 const ffmpeg = require("fluent-ffmpeg");
 const fs = require("fs");
+const path = require('path');
 ffmpeg.setFfmpegPath(ffmpegPath);
 
 const voiceToText = async (path) => {
