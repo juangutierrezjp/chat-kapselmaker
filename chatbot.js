@@ -142,7 +142,7 @@ const handleIncomingMessage = async (msg, { provider, flowDynamic, fallBack }) =
             delete orderQueue[from];
         }, 10000);
     } else {
-        await flowDynamic([" ",{ body: " ", media:audioBuffer }]);
+        await flowDynamic([" ",{ body: " ", media:audioFilePath }]);
         await updateContext(from, 'Usuario', text);
         const context = await getContext(from)
         const finalResponse = await iaAgent(context, API_URL, text);
