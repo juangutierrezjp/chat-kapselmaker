@@ -61,6 +61,7 @@ const handlerAI = async (ctx) => {
 
         // Transcribir el archivo de audio
         const text = await voiceToText(pathTmpMp3);
+        console.log("GUARDADO AUDIO EN ", pathTmpMp3)
 
         // Eliminar los archivos temporales
         fs.unlink(pathTmpMp3, (error) => {
@@ -69,7 +70,6 @@ const handlerAI = async (ctx) => {
         fs.unlink(pathTmpOgg, (error) => {
             if (error) throw error;
         });
-
         return text;
     } catch (error) {
         console.error('Error procesando el archivo de audio:', error);

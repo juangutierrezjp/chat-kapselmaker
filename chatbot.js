@@ -105,6 +105,7 @@ const handleIncomingMessage = async (msg, { provider, flowDynamic, fallBack }) =
             await flowDynamic("",{ body:" ", media: '/root/chat-kapselmaker/img.jpg' });
         }catch(err){
             console.log("ERRORR:", err )
+
         }
         
         await updateContext(from, 'Usuario', text);
