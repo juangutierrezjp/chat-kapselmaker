@@ -71,9 +71,12 @@ const handleIncomingMessage = async (msg, { provider, flowDynamic, fallBack }) =
             }
             console.log("Enviando audio...");
             // Intenta enviar el archivo de audio utilizando flowDynamic
-            await flowDynamic([
-                " ", 
-                { body: " ", media: audioFilePath } // Asegúrate de que flowDynamic acepte esta estructura
+            if (fs.existsSync(audioFilePath)) {
+                console.log("El archivo de audio existe y está listo para enviarse:", audioFilePath);
+            } else {
+                throw new Error("El archivo de audio no fue generado correctamente.");
+            }            
+            await flowDynamic(["",{ body: " ", media: audioFilePath } // Asegúrate de que flowDynamic acepte esta estructura
             ]);
             console.log("Audio enviado: ", audioFilePath);
             // Después de enviar, elimina el archivo de audio
