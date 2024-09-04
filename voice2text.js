@@ -39,19 +39,41 @@ const convertOggMp3 = async (inputStream, outStream) => {
 };
 
 const handlerAI = async (ctx) => {
-    const buffer = await downloadMediaMessage(ctx, "buffer");
-    const pathTmpOgg = `${process.cwd()}/tmp/voice-note-${Date.now()}.ogg`;
-    const pathTmpMp3 = `${process.cwd()}/tmp/voice-note-${Date.now()}.mp3`;
-    await fs.writeFileSync(pathTmpOgg, buffer);
-    await convertOggMp3(pathTmpOgg, pathTmpMp3);
-    const text = await voiceToText(pathTmpMp3);
-    fs.unlink(pathTmpMp3, (error) => {
-        if (error) throw error;
-    });
-    fs.unlink(pathTmpOgg, (error) => {
-        if (error) throw error;
-    });
-    return text;
+    try {
+        const buffer = await downloadMediaMessage(ctx, "buffer");
+        const tmpDir = path.join(process.cwd(), 'tmp');
+
+        // Verificar si el directorio tmp existe, y si no, crearlo
+        if (!fs.existsSync(tmpDir)) {
+            fs.mkdirSync(tmpDir);
+        }
+
+        const timestamp = Date.now();
+        const pathTmpOgg = `${tmpDir}/voice-note-${timestamp}.ogg`;
+        const pathTmpMp3 = `${tmpDir}/voice-note-${timestamp}.mp3`;
+
+        // Guardar archivo .ogg
+        fs.writeFileSync(pathTmpOgg, buffer);
+
+        // Convertir el archivo de ogg a mp3
+        await convertOggMp3(pathTmpOgg, pathTmpMp3);
+
+        // Transcribir el archivo de audio
+        const text = await voiceToText(pathTmpMp3);
+
+        // Eliminar los archivos temporales
+        fs.unlink(pathTmpMp3, (error) => {
+            if (error) throw error;
+        });
+        fs.unlink(pathTmpOgg, (error) => {
+            if (error) throw error;
+        });
+
+        return text;
+    } catch (error) {
+        console.error('Error procesando el archivo de audio:', error);
+        throw error;
+    }
 };
 
 module.exports = { handlerAI };
